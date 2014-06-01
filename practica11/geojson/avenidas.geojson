@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "Name": "AAvenida Central", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.213012, 10.017170 ], [ -84.208314, 10.018445 ] ] } }
+,
+{ "type": "Feature", "properties": { "Name": "AAvenida 2", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.212787, 10.016360 ], [ -84.208011, 10.017650 ] ] } }
+,
+{ "type": "Feature", "properties": { "Name": "AAvenida 4", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.212528, 10.015489 ], [ -84.207757, 10.016805 ] ] } }
+,
+{ "type": "Feature", "properties": { "Name": "AAvenida 1", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.208608, 10.019279 ], [ -84.213213, 10.018036 ] ] } }
+,
+{ "type": "Feature", "properties": { "Name": "AAvenida 3", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.208834, 10.020114 ], [ -84.213442, 10.018855 ] ] } }
+
+]
+}

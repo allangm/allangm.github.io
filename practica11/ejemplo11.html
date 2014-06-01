@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mapa Web</title>
+<link rel="stylesheet"
+href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css"/>
+<!--[if lte IE 8]>
+<link rel="stylesheet"
+href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+<![endif]-->
+<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+<style type="text/css">
+#map { width: 700px; height: 500px }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script type="text/javascript">
+
+function onEachFeature(feature, layer) {
+layer.bindPopup("Nombre: "+feature.properties.Nombre);
+};
+
+function onEachFeatureName(feature, layer) {
+layer.bindPopup("Nombre: "+feature.properties.Name);
+};
+
+var xhr1 = new XMLHttpRequest();
+xhr1.open('GET','geojson/edificios.geojson',false);
+xhr1.send(null);
+var edificios = JSON.parse(xhr1.responseText);
+
+var xhr2 = new XMLHttpRequest();
+xhr2.open('GET','geojson/quebradas.geojson',false);
+xhr2.send(null);
+var quebradas = JSON.parse(xhr2.responseText);
+
+var xhr3 = new XMLHttpRequest();
+xhr3.open('GET','geojson/calles.geojson',false);
+xhr3.send(null);
+var calles = JSON.parse(xhr3.responseText);
+
+var xhr4 = new XMLHttpRequest();
+xhr4.open('GET','geojson/avenidas.geojson',false);
+xhr4.send(null);
+var avenidas = JSON.parse(xhr4.responseText);
+
+var style1 = {
+"color": "#ff7800",
+"weight": 5,
+"opacity": 0.65
+};
+var style2 = {
+"color": "#0000FF",
+"weight": 5,
+"opacity": 0.65
+};
+var style3 = {
+"color": "#A4A4A4",
+"weight": 5,
+"opacity": 0.65
+};
+var style4 = {
+"color": "#000000",
+"weight": 5,
+"opacity": 0.65
+};
+var map = L.map('map').setView([10.01803,-84.21102],15);
+L.geoJson(edificios, {
+style: style1, onEachFeature: onEachFeature
+}).addTo(map);
+
+L.geoJson(quebradas, {
+style: style2, onEachFeature: onEachFeature
+}).addTo(map);
+
+L.geoJson(calles, {
+style: style3, onEachFeature: onEachFeatureName
+}).addTo(map);
+
+L.geoJson(avenidas, {
+style: style4, onEachFeature: onEachFeatureName
+}).addTo(map);
+</script>
+</body>
+</html>

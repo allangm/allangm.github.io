@@ -1,0 +1,17 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "Name": "ACalle 2", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.212439, 10.019319 ], [ -84.211404, 10.015621 ] ] } }
+,
+{ "type": "Feature", "properties": { "Name": "ACalle 1", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.210766, 10.019751 ], [ -84.209763, 10.016136 ] ] } }
+,
+{ "type": "Feature", "properties": { "Name": "ACalle 3", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.208862, 10.016369 ], [ -84.209854, 10.019968 ] ] } }
+,
+{ "type": "Feature", "properties": { "Name": "ACalle 5", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.209065, 10.020165 ], [ -84.208017, 10.016615 ] ] } }
+,
+{ "type": "Feature", "properties": { "Name": "ACalle Central", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.210579, 10.015855 ], [ -84.211597, 10.019489 ] ] } }
+,
+{ "type": "Feature", "properties": { "Name": "ACalle 4", "Descriptio": "" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.212266, 10.015451 ], [ -84.213274, 10.019045 ] ] } }
+
+]
+}

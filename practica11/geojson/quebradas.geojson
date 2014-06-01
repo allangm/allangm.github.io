@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "Nombre": "tarcoles" }, "geometry": { "type": "LineString", "coordinates": [ [ -84.211426, 10.019568 ], [ -84.210834, 10.019325 ], [ -84.210417, 10.017793 ], [ -84.209616, 10.016835 ], [ -84.208919, 10.016295 ] ] } }
+
+]
+}
