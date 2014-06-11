@@ -1,0 +1,16 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "cat": 1, "Transporte": "ParadaAutobus", "Ruta": "Tejar-Cartago", "catTelefon": 4 }, "geometry": { "type": "Point", "coordinates": [ -83.935892418673504, 9.847623747892905 ] } },
+{ "type": "Feature", "properties": { "cat": 2, "Transporte": "ParadaAutobus", "Ruta": "Tejar-Cartago", "catTelefon": 1 }, "geometry": { "type": "Point", "coordinates": [ -83.938219240194627, 9.843868270108109 ] } },
+{ "type": "Feature", "properties": { "cat": 3, "Transporte": "ParadaAutobus", "Ruta": "Cartago-Tobosi", "catTelefon": 2 }, "geometry": { "type": "Point", "coordinates": [ -83.938579190485186, 9.845046215461821 ] } },
+{ "type": "Feature", "properties": { "cat": 4, "Transporte": "ParadaAutobus", "Ruta": "Tejar-Cartago", "catTelefon": 1 }, "geometry": { "type": "Point", "coordinates": [ -83.937049401750301, 9.844970219114208 ] } },
+{ "type": "Feature", "properties": { "cat": 5, "Transporte": "ParadaAutobus", "Ruta": null, "catTelefon": 1 }, "geometry": { "type": "Point", "coordinates": [ -83.951335638375213, 9.834531693639727 ] } },
+{ "type": "Feature", "properties": { "cat": 6, "Transporte": "ParadaAutobus", "Ruta": "Tejar-Cartago", "catTelefon": 2 }, "geometry": { "type": "Point", "coordinates": [ -83.950238628113382, 9.842454332014958 ] } },
+{ "type": "Feature", "properties": { "cat": 7, "Transporte": "ParadaAutobus", "Ruta": "Terminal San Isidro", "catTelefon": 1 }, "geometry": { "type": "Point", "coordinates": [ -83.952267326884012, 9.827825485195081 ] } },
+{ "type": "Feature", "properties": { "cat": 8, "Transporte": "ParadaAutobus", "Ruta": "Cartago-San Isidro", "catTelefon": 1 }, "geometry": { "type": "Point", "coordinates": [ -83.945460584286465, 9.839446662854124 ] } },
+{ "type": "Feature", "properties": { "cat": 9, "Transporte": "ParadaAutobus", "Ruta": "Cartago-San Isidro", "catTelefon": 1 }, "geometry": { "type": "Point", "coordinates": [ -83.951955653768024, 9.831200455585236 ] } }
+]
+}

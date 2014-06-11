@@ -1,0 +1,11 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "cat": 1, "Nombre": "Basilica Inmaculada Concepcion", "Servicio": "Iglesia", "PROVINCIA": "CARTAGO", "NCANTON": "EL GUARCO", "NDISTRITO": "TEJAR", "PROV": 3, "CANTON": 8, "DISTRITO": 1, "CODDIST": 30801 }, "geometry": { "type": "Point", "coordinates": [ -83.938210643355035, 9.844732100064119 ] } },
+{ "type": "Feature", "properties": { "cat": 30, "Nombre": "Villa Francisca", "Servicio": "Iglesia", "PROVINCIA": "CARTAGO", "NCANTON": "EL GUARCO", "NDISTRITO": "TEJAR", "PROV": 3, "CANTON": 8, "DISTRITO": 1, "CODDIST": 30801 }, "geometry": { "type": "Point", "coordinates": [ -83.932191181986454, 9.848570476115924 ] } },
+{ "type": "Feature", "properties": { "cat": 31, "Nombre": "Santa Teresita", "Servicio": "Iglesia", "PROVINCIA": "CARTAGO", "NCANTON": "EL GUARCO", "NDISTRITO": "TEJAR", "PROV": 3, "CANTON": 8, "DISTRITO": 1, "CODDIST": 30801 }, "geometry": { "type": "Point", "coordinates": [ -83.932077699799009, 9.841445840892741 ] } },
+{ "type": "Feature", "properties": { "cat": 32, "Nombre": "La Asuncion", "Servicio": "Iglesia", "PROVINCIA": "CARTAGO", "NCANTON": "EL GUARCO", "NDISTRITO": "TEJAR", "PROV": 3, "CANTON": 8, "DISTRITO": 1, "CODDIST": 30801 }, "geometry": { "type": "Point", "coordinates": [ -83.931840870245395, 9.844588964374863 ] } }
+]
+}

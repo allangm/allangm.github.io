@@ -1,0 +1,364 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Mapa Web</title>
+<link rel="stylesheet"
+href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css"/>
+<!-- 
+	  -->
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+<!--[if lte IE 8]>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/
+leaflet-0.5/leaflet.ie.css" />
+<![endif]  -->
+
+<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+<script src="https://raw.github.com/lvoogdt/Leaflet.awesome-markers/master/dist/leaflet.awesome-markers.js"></script>
+<style type="text/css">
+#map { width: 600px; height: 400px }
+.awesome-marker {
+background: url("https://raw.github.com/lvoogdt/Leaflet.awesome-markers/master/dist/images/markers-soft.png") no-repeat 0 0;
+width: 35px; height: 46px;
+position:absolute;
+left:0; top:0;
+display: block;
+text-align: center;
+}
+.awesome-marker-shadow {
+background: url("https://raw.github.com/lvoogdt/Leaflet.awesome-markers/master/dist/images/markers-shadow.png") no-repeat 0 0;
+width: 36px; height: 16px;
+}
+.awesome-marker i {
+color: #333; margin-top: 10px;
+display: inline-block; font-size: 14px;
+}
+.awesome-marker .icon-white { color: #fff; }
+.awesome-marker-icon-red { background-position: 0 0; }
+.awesome-marker-icon-darkred { background-position: -180px 0; }
+.awesome-marker-icon-orange { background-position: -36px 0; }
+.awesome-marker-icon-green { background-position: -72px 0; }
+.awesome-marker-icon-darkgreen { background-position: -252px 0; }
+.awesome-marker-icon-blue { background-position: -108px 0; }
+.awesome-marker-icon-darkblue { background-position: -216px 0; }
+.awesome-marker-icon-purple { background-position: -144px 0; }
+.awesome-marker-icon-darkpurple { background-position: -288px 0; }
+.awesome-marker-icon-cadetblue { background-position: -324px 0; }
+</style>
+</head>
+<body>
+<div id="titulo" style="text-align: center ;"><h1>EL GUARCO</h1></div>
+<div id="map" style="margin:0 auto;"></div>
+<script type="text/javascript">
+// ----------------------  Iconos  -------------------------------
+//para restaurantes
+var iconRestaurant = L.AwesomeMarkers.icon({
+icon: "food",
+color: "darkred",
+iconColor: "black"
+});
+//para iglesias
+var iconIglesia = L.AwesomeMarkers.icon({
+icon: "plus",
+color: "white",
+iconColor: "black"
+});
+//para Escuelas
+var iconSchool = L.AwesomeMarkers.icon({
+icon: "book",
+color: "blue",
+iconColor: "white"
+});
+//Telefonos
+var iconPhone = L.AwesomeMarkers.icon({
+icon: "phone-sign",
+color: "orange",
+iconColor: "white"
+});
+//Paradas
+var iconBus = L.AwesomeMarkers.icon({
+icon: "truck",
+color: "red",
+iconColor: "white"
+});
+//Parques
+var iconPark = L.AwesomeMarkers.icon({
+icon: "dribbble",
+color: "green",
+iconColor: "white"
+});
+//comercios
+var iconCom = L.AwesomeMarkers.icon({
+icon: "shopping-cart",
+color: "purple",
+iconColor: "white"
+});
+//bancos
+var iconBank = L.AwesomeMarkers.icon({
+icon: "money",
+color: "darkgreen",
+iconColor: "white"
+});
+//puentes
+var iconPuente = L.AwesomeMarkers.icon({
+icon: "road",
+color: "darkpurple",
+iconColor: "white"
+});
+//----------------------------Etiquetas--------------------
+function onEachFeatureName(feature, layer) {
+layer.bindPopup(feature.properties.Name);
+};
+function onEachFeatureNom(feature, layer) {
+layer.bindPopup(feature.properties.Nombre);
+};
+//distritos
+function onEachFeatureNdis(feature, layer) {
+layer.bindPopup(feature.properties.NDISTRITO);
+};
+//escuelas e iglesia
+function onEachFeatureSchool(feature, layer) {
+layer.bindPopup(feature.properties.Servicio+ " " + feature.properties.Nombre);
+};
+//telefono
+function onEachFeatureTipo(feature, layer) {
+layer.bindPopup(feature.properties.Tipo);
+};
+//Paradas de Bus
+function onEachFeatureRuta(feature, layer) {
+layer.bindPopup("Parada de bus "+feature.properties.Ruta);
+};
+//Poblados thiessen
+function onEachFeaturePoblado(feature, layer) {
+layer.bindPopup(feature.properties.Tipo + " " + feature.properties.Poblado);
+};
+//Comercios
+function onEachFeatureComercios(feature, layer) {
+layer.bindPopup(feature.properties.Tipo + " " + feature.properties.Comercios);
+};
+//Bancos
+function onEachFeatureBancos(feature, layer) {
+layer.bindPopup(feature.properties.Tipo + " " + feature.properties.Nombre);
+};
+//Bancos
+function onEachFeaturePuentes(feature, layer) {
+layer.bindPopup(feature.properties.id);
+};
+//------------------- Muestra de iconos  ------------------------
+function FoodToLayer(feature, latlng) {
+return L.marker(latlng, {icon: iconRestaurant});
+};
+//escuelas
+function EscuelaToLayer(feature, latlng) {
+return L.marker(latlng, {icon: iconSchool});
+};
+//iglesias 
+function IglesiaToLayer(feature, latlng) {
+return L.marker(latlng, {icon: iconIglesia});
+};
+//telefono
+function TelToLayer(feature, latlng) {
+return L.marker(latlng, {icon: iconPhone});
+};
+//Parada de bus
+function BusToLayer(feature, latlng) {
+return L.marker(latlng, {icon: iconBus});
+};
+//parque
+function ParkToLayer(feature, latlng) {
+return L.marker(latlng, {icon: iconPark});
+};
+//comercios
+function ComerciosToLayer(feature, latlng) {
+return L.marker(latlng, {icon: iconCom});
+};
+//bancos
+function BancosToLayer(feature, latlng) {
+return L.marker(latlng, {icon: iconBank});
+};
+//puentes
+function PuentesToLayer(feature, latlng) {
+return L.marker(latlng, {icon: iconPuente});
+};
+
+//---------------------carga de archivos--------------------------
+var xhr = new XMLHttpRequest() || new ActiveXObject("Msxml2.XMLHTTP")
+|| new ActiveXObject("Microsoft.XMLHTTP");
+xhr.open("GET","geojson/escuelas.geojson",false); xhr.send(null);
+var escuelas = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/iglesias.geojson",false); xhr.send(null);
+var iglesias = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/restaurantes.geojson",false); xhr.send(null);
+var restaurantes = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/telefonos.geojson",false); xhr.send(null);
+var telefonos = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/distritos.geojson",false); xhr.send(null);
+var distritos = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/paradasBus.geojson",false); xhr.send(null);
+var paradas = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/parques.geojson",false); xhr.send(null);
+var parques = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/paradasXtelefonos.geojson",false); xhr.send(null);
+var paradasXtelefonos = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/escuelasXplaza.geojson",false); xhr.send(null);
+var escuelasXplaza = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/bufferRios.geojson",false); xhr.send(null);
+var bufferRios = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/bufferQuebradas.geojson",false); xhr.send(null);
+var bufferQuebradas = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/thiessen.geojson",false); xhr.send(null);
+var thiessen = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/comercios.geojson",false); xhr.send(null);
+var comercios = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/bancos.geojson",false); xhr.send(null);
+var bancos = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/puentes.geojson",false); xhr.send(null);
+var puentes = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/restaurantesXbanco.geojson",false); xhr.send(null);
+var restaurantesXbanco = JSON.parse(xhr.responseText);
+xhr.open("GET","geojson/bufferscalles.geojson",false); xhr.send(null);
+var bufferscalles = JSON.parse(xhr.responseText);
+
+//--------------------------- estilos ------------------------------------------
+var styleLineas = {
+"color": "#E90F0F",
+"weight": 1,
+"opacity": 0.65
+};
+var styleAvenidas = {
+"color": "#FF0000",
+"weight": 2,
+"opacity": 0.65
+};
+var styleRios = {
+"color": "#0CB7F2",
+"weight": 1,
+"opacity": 0.65
+};
+var styleQuebradas = {
+"color": "#58D3F7",
+"weight": 1,
+"opacity": 0.65
+};
+var styleCalles = {
+"color": "#4D2106",
+"weight": 1,
+"opacity": 0.65
+};
+var stylePoligonos = {
+"color": "#ff7800",
+"weight": 1,
+"opacity": 0.65
+};
+var stylethiessen = {
+"color": "#868A08",
+"weight": 1,
+"opacity": 0.85
+};
+// --------------------------------- Definicion de capas --------------------------------------
+//Escuelas
+var escuelasLayer = L.geoJson(escuelas, {
+pointToLayer: EscuelaToLayer, onEachFeature: onEachFeatureSchool
+});
+//Iglesia
+var iglesiasLayer = L.geoJson(iglesias, {
+pointToLayer: IglesiaToLayer, onEachFeature: onEachFeatureSchool
+});
+//Restaurante
+var restaurantesLayer = L.geoJson(restaurantes, {
+pointToLayer: FoodToLayer, onEachFeature: onEachFeatureSchool
+});
+//telefono
+var TelefonosLayer = L.geoJson(telefonos, {
+pointToLayer: TelToLayer, onEachFeature: onEachFeatureTipo
+});
+//distritos
+var distritosLayer = L.geoJson(distritos, {
+style: stylePoligonos, onEachFeature: onEachFeatureNdis
+});
+//paradas
+var paradasLayer = L.geoJson(paradas, {
+pointToLayer: BusToLayer, onEachFeature: onEachFeatureRuta
+});
+//parques
+var parquesLayer = L.geoJson(parques, {
+pointToLayer: ParkToLayer, onEachFeature: onEachFeatureNom
+});
+//comercios
+var comerciosLayer = L.geoJson(comercios, {
+pointToLayer: ComerciosToLayer, onEachFeature: onEachFeatureComercios
+});
+//bancos
+var bancosLayer = L.geoJson(bancos, {
+pointToLayer: BancosToLayer, onEachFeature: onEachFeatureBancos
+});
+//bancos
+var puentesLayer = L.geoJson(puentes, {
+pointToLayer: PuentesToLayer, onEachFeature: onEachFeaturePuentes
+});
+//paradasXtelefono
+var paradasXtelefonoLayer = L.geoJson(paradasXtelefonos, {
+style: styleLineas
+});
+//paradasXtelefono
+var restaurantesXbancoLayer = L.geoJson(restaurantesXbanco, {
+style: styleLineas
+});
+//escuelasXplaza
+var escuelasXplazaLayer = L.geoJson(escuelasXplaza, {
+style: styleLineas
+});
+//Rios
+var RiosLayer = L.geoJson(bufferRios, {
+style: styleRios
+});
+//Quebradas
+var QuebradasLayer = L.geoJson(bufferQuebradas, {
+style: styleQuebradas
+});
+var CallesLayer = L.geoJson(bufferscalles, {
+style: styleCalles
+});
+//thiessen 
+var thiessenLayer = L.geoJson(thiessen, {
+style: stylethiessen, onEachFeature: onEachFeaturePoblado
+});
+
+//--------------------------- Mapa  -------------------------------
+var map = L.map("map", {
+center: new L.LatLng(9.7551,-83.9402),
+zoom: 10,
+layers: [escuelasLayer, iglesiasLayer, distritosLayer, restaurantesLayer, comerciosLayer, bancosLayer, puentesLayer, TelefonosLayer, paradasLayer, parquesLayer, paradasXtelefonoLayer, restaurantesXbancoLayer, escuelasXplazaLayer, 
+RiosLayer, QuebradasLayer, CallesLayer, thiessenLayer]
+});
+
+//capas juntas
+var overlayMaps = {
+"Escuelas": escuelasLayer,
+"Iglesias": iglesiasLayer,
+"Telefonos": TelefonosLayer,
+"Restaurantes": restaurantesLayer,
+"Comercios": comerciosLayer,
+"Bancos": bancosLayer,
+"Puentes": puentesLayer,
+"Paradas de Bus": paradasLayer,
+"Parques y Plazas": parquesLayer,
+"paradasXtelefonos": paradasXtelefonoLayer,
+"restaurantesXbanco": restaurantesXbancoLayer,
+"escuelasXplaza": escuelasXplazaLayer,
+"Rios": RiosLayer,
+"Quebradas": QuebradasLayer,
+"Calles": CallesLayer
+
+};
+
+//capas separadas
+var baseMaps = {
+    "Distritos": distritosLayer,
+    "Thiessen": thiessenLayer
+};
+
+L.control.layers(baseMaps, overlayMaps).addTo(map);
+L.control.scale().addTo(map);
+</script>
+</body>
+</html>

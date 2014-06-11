@@ -1,0 +1,21 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "cat": 1, "Nombre": "Parque el Tejar", "Servicio": "Parque" }, "geometry": { "type": "Point", "coordinates": [ -83.93900993972315, 9.845007663228881 ] } },
+{ "type": "Feature", "properties": { "cat": 2, "Nombre": "Parque San Isidro", "Servicio": "Parque" }, "geometry": { "type": "Point", "coordinates": [ -83.953041517616668, 9.829973821743648 ] } },
+{ "type": "Feature", "properties": { "cat": 3, "Nombre": "Parque San Isidro", "Servicio": "Parque" }, "geometry": { "type": "Point", "coordinates": [ -83.953041517616668, 9.829973821743648 ] } },
+{ "type": "Feature", "properties": { "cat": 4, "Nombre": "Plaza de tobosi", "Servicio": "Plaza" }, "geometry": { "type": "Point", "coordinates": [ -83.991374341839006, 9.842842900339266 ] } },
+{ "type": "Feature", "properties": { "cat": 5, "Nombre": "Plaza de deportes", "Servicio": "Plaza" }, "geometry": { "type": "Point", "coordinates": [ -83.9403101, 9.8477989 ] } },
+{ "type": "Feature", "properties": { "cat": 6, "Nombre": "Plaza Hacienda Vieja", "Servicio": "Plaza" }, "geometry": { "type": "Point", "coordinates": [ -83.9315997, 9.8427888 ] } },
+{ "type": "Feature", "properties": { "cat": 7, "Nombre": null, "Servicio": "Plaza" }, "geometry": { "type": "Point", "coordinates": [ -83.9475609, 9.842113 ] } },
+{ "type": "Feature", "properties": { "cat": 8, "Nombre": "Plaza de las Catalinas", "Servicio": "Plaza" }, "geometry": { "type": "Point", "coordinates": [ -83.9463778, 9.8445604 ] } },
+{ "type": "Feature", "properties": { "cat": 9, "Nombre": "Plaza de Cañon del Guarco", "Servicio": "Plaza" }, "geometry": { "type": "Point", "coordinates": [ -83.9181888, 9.6839154 ] } },
+{ "type": "Feature", "properties": { "cat": 10, "Nombre": null, "Servicio": "Plaza" }, "geometry": { "type": "Point", "coordinates": [ -83.947843, 9.7857898 ] } },
+{ "type": "Feature", "properties": { "cat": 11, "Nombre": null, "Servicio": "Plaza" }, "geometry": { "type": "Point", "coordinates": [ -84.007221, 9.8286569 ] } },
+{ "type": "Feature", "properties": { "cat": 12, "Nombre": "Parque", "Servicio": "Parque" }, "geometry": { "type": "Point", "coordinates": [ -83.9366365, 9.8433819 ] } },
+{ "type": "Feature", "properties": { "cat": 13, "Nombre": "Parque", "Servicio": "Parque" }, "geometry": { "type": "Point", "coordinates": [ -83.9339557, 9.852768 ] } },
+{ "type": "Feature", "properties": { "cat": 14, "Nombre": "Plaza de Tobosi", "Servicio": "Plaza" }, "geometry": { "type": "Point", "coordinates": [ -83.984318349023411, 9.837859314110535 ] } }
+]
+}

@@ -1,0 +1,27 @@
+{
+"type": "FeatureCollection",
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "cat": 1, "cat_": 1, "Nombre": "El Quijongo", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.9502606, 9.8429084 ] } },
+{ "type": "Feature", "properties": { "cat": 2, "cat_": 2, "Nombre": "El condor", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.9371094, 9.8463935 ] } },
+{ "type": "Feature", "id": -1294967293, "properties": { "cat": 3, "cat_": 3, "Nombre": "", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.9392471, 9.8445806 ] } },
+{ "type": "Feature", "id": -294967292, "properties": { "cat": 4, "cat_": 5, "Nombre": "", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.9390486, 9.8441313 ] } },
+{ "type": "Feature", "id": 705032709, "properties": { "cat": 5, "cat_": 6, "Nombre": "Hotel y Rest. el Guarco", "Servicio": "Hotel Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.9499101, 9.8456101 ] } },
+{ "type": "Feature", "id": 1705032710, "properties": { "cat": 6, "cat_": 7, "Nombre": "Bar Restaurante Las Tejas", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.95007, 9.82405 ] } },
+{ "type": "Feature", "id": -1589934585, "properties": { "cat": 7, "cat_": 11, "Nombre": "Restaurante Mi Casita", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.95078, 9.73979 ] } },
+{ "type": "Feature", "id": -589934584, "properties": { "cat": 8, "cat_": 12, "Nombre": "Restaurante Jack & Charlie", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.92396, 9.69544 ] } },
+{ "type": "Feature", "id": 410065417, "properties": { "cat": 9, "cat_": 13, "Nombre": "Restaurante Everest", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.906494, 9.6870286 ] } },
+{ "type": "Feature", "id": 1410065418, "properties": { "cat": 10, "cat_": 14, "Nombre": "Los Chespiritos", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.8189623, 9.6163214 ] } },
+{ "type": "Feature", "id": -1884901877, "properties": { "cat": 11, "cat_": 15, "Nombre": "Dimitris", "Servicio": "Bar Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.960051890480301, 9.847164651209766 ] } },
+{ "type": "Feature", "id": -884901876, "properties": { "cat": 12, "cat_": 22, "Nombre": "Liyen", "Servicio": "Bar y Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.951028752005286, 9.835719093853454 ] } },
+{ "type": "Feature", "id": 115098125, "properties": { "cat": 13, "cat_": 23, "Nombre": "Las Gemelas", "Servicio": "Bar y Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.951282904470006, 9.827206980876355 ] } },
+{ "type": "Feature", "id": 1115098126, "properties": { "cat": 14, "cat_": 24, "Nombre": "Hong Kong", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.934689329598569, 9.84427785408117 ] } },
+{ "type": "Feature", "id": 2115098127, "properties": { "cat": 15, "cat_": 28, "Nombre": "Ram", "Servicio": "Soda" }, "geometry": { "type": "Point", "coordinates": [ -83.937236739575312, 9.843869575441174 ] } },
+{ "type": "Feature", "id": -1179869168, "properties": { "cat": 16, "cat_": 29, "Nombre": "Soda", "Servicio": "Soda" }, "geometry": { "type": "Point", "coordinates": [ -83.939956651356994, 9.844941520620067 ] } },
+{ "type": "Feature", "id": -179869167, "properties": { "cat": 17, "cat_": 30, "Nombre": "Colitas", "Servicio": "Soda" }, "geometry": { "type": "Point", "coordinates": [ -83.939636661735648, 9.843270545737246 ] } },
+{ "type": "Feature", "id": 820130834, "properties": { "cat": 18, "cat_": 31, "Nombre": "Nuevo Mundo", "Servicio": "Restaurante" }, "geometry": { "type": "Point", "coordinates": [ -83.948084387739925, 9.842167067122316 ] } },
+{ "type": "Feature", "id": 1820130835, "properties": { "cat": 19, "cat_": 32, "Nombre": "Dany", "Servicio": "Soda" }, "geometry": { "type": "Point", "coordinates": [ -83.948500374247701, 9.840842887917569 ] } },
+{ "type": "Feature", "id": -1474836460, "properties": { "cat": 20, "cat_": 35, "Nombre": "El Merendero", "Servicio": "Soda" }, "geometry": { "type": "Point", "coordinates": [ -83.939412669000674, 9.846423321460088 ] } },
+{ "type": "Feature", "id": -474836459, "properties": { "cat": 21, "cat_": 33, "Nombre": "Kondas", "Servicio": "Soda" }, "geometry": { "type": "Point", "coordinates": [ -83.939284673152116, 9.842261651148073 ] } }
+]
+}
